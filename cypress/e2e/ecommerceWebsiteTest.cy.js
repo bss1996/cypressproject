@@ -3,6 +3,6 @@
 describe('Ecommerce Website',()=>{
 
     it('passes',()=>{
-        cy.visit("https://www.automationteststore.com/")
+        cy.visit("https://www.automationteststore.com/") 
     })
 })
