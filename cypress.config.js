@@ -19,6 +19,7 @@ module.exports = defineConfig({
       
     ],
     
+    specPattern:"cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     defaultCommandTimeout: 10000,   
     video: true,
 
