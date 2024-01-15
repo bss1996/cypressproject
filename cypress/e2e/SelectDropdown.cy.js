@@ -10,7 +10,7 @@ describe('Validate Dropdowns',()=>{
         cy.wait(3000)
         cy.get("#ui-id-4").click({force:true}) 
         cy.get('#ctl00_mainContent_rbtnl_Trip_1').check(); // check radio button
-        cy.get('')
+        
         // cy.get('.ui-menu-item').each(($ele,index,$list)=>{
         // const list = $ele.text()
         // const country = "India"
