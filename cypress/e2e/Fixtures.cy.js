@@ -1,23 +1,14 @@
-/// <reference types ='cypress' />
+/// <reference types = 'Cypress' />
+
 
 describe('', () => {
-    beforeEach(() => {
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    })
-
     it('', () => {
-        cy.fixture('example.json').then((testdata) => {
-            if (Cypress._.isArray(testdata)) {
-                testdata.forEach((data) => {
-                    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.username)
-                    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(data.password)
-                });
-            } else {
-                cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type(testdata.username)
-                cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type(testdata.password)
-                
-            }
+        cy.fixture('example').then((data)=>{
+            globalThis.data = data
+            cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+            cy.get('input[name="username"]').type(data.username)
+            cy.get('input[name="password"]').type(data.password)
+            cy.get('button[type="submit"]').click()
         })
-        cy.get('.oxd-button').click()
-    })
-})
+    });
+});
