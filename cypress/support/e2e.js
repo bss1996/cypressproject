@@ -15,8 +15,10 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+//import 'cypress-file-upload';
 require('@cypress/xpath')
-require('@4tw/cypress-drag-drop')
+//require('@4tw/cypress-drag-drop')
+//require('cypress-downloadfile')
 
 
 // Alternatively you can use CommonJS syntax:
