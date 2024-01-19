@@ -1,5 +1,10 @@
 {
   "devDependencies": {
+    "cypress": "^13.6.3",
     "cypress-downloadfile": "^1.2.3"
+  },
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "docker": "^1.0.0"
   }
 }
