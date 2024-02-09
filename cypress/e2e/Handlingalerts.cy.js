@@ -9,9 +9,6 @@ describe('Handling of Alerts in cypress', ()=>{
         cy.on('window:alert',(alertText)=>{
             expect(alertText).to.contains('I am a JS Alert')
         })
-
-
-
     })
 
     it('hanlding of Confirm Alert',()=>{
